@@ -3,15 +3,16 @@ package model;
 public class Scacchiera extends AbstractConfigurazioneScacchiera{
 	
 	private Pezzo[][] scacchiera;
-	private static char coloreMossa;
+	private char mossa;
 	
-	public Scacchiera(Pezzo[][] scacchiera){
+	public Scacchiera(Pezzo[][] scacchiera, char colore){
 		this.scacchiera = scacchiera;
+		mossa = colore;
 	}
 	
-	public Scacchiera(ConfigurazioneScacchiera conf){
-		this.scacchiera = new Pezzo[8][8];
-		
+	public Scacchiera(ConfigurazioneScacchiera conf, char colore){
+		scacchiera = new Pezzo[8][8];
+		mossa = colore;
 		for(int x=0; x<8; x++)
 			for(int y=0; y<8; y++)
 				set(x,y, conf.getPezzo(x, y));
@@ -19,8 +20,8 @@ public class Scacchiera extends AbstractConfigurazioneScacchiera{
 	
 	
 	public Scacchiera(){
-		coloreMossa = 'b';
-		this.scacchiera = new Pezzo[8][8];
+		scacchiera = new Pezzo[8][8];
+		mossa = 'b';
 		
 		set(0,0,new Torre('n'));
 		set(1,0,new Cavallo('n'));
@@ -57,8 +58,7 @@ public class Scacchiera extends AbstractConfigurazioneScacchiera{
 	}
 	
 	public ConfigurazioneScacchiera scambia(int fromX, int fromY, int intoX, int intoY){
-		
-		Scacchiera result = new Scacchiera(scacchiera);
+		Scacchiera result = new Scacchiera(scacchiera, mossa);
 		
 		Pezzo b = getPezzo(intoX, intoY);
 		Pezzo a = getPezzo(fromX, fromY);
@@ -71,14 +71,16 @@ public class Scacchiera extends AbstractConfigurazioneScacchiera{
 	}
 	
 	public ConfigurazioneScacchiera scambia(int fromX, int fromY, AbstractPezzo p){
-		Scacchiera result = new Scacchiera(scacchiera);
+		Scacchiera result = new Scacchiera(scacchiera, mossa);
+		
 		result.set(fromX, fromY, p);
 		return result;
 	}
 	
 	public ConfigurazioneScacchiera mangia(int fromX, int fromY, int intoX, int intoY){
 		
-		Scacchiera result = new Scacchiera(scacchiera);
+		Scacchiera result = new Scacchiera(scacchiera,mossa);
+		
 		Pezzo fromPezzo = getPezzo(fromX, fromY);
 		result.set(intoX, intoY, fromPezzo);
 		result.set(fromX, fromY, new Vuoto());
@@ -112,16 +114,16 @@ public class Scacchiera extends AbstractConfigurazioneScacchiera{
 		return result;
 	}
 	public void setColoreMossa(char colore){
-		coloreMossa = colore;
+		mossa=colore;
 	}
 	
 	public char getColoreMossa(){
-		return coloreMossa;
+		return mossa;
 	}
 	
 	@Override
 	public ConfigurazioneScacchiera creaCopia() {
-		return new Scacchiera(this);
+		return new Scacchiera(this, mossa);
 	}
 
 	@Override

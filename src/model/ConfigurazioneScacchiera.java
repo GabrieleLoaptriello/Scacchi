@@ -12,8 +12,8 @@ public interface ConfigurazioneScacchiera {
 	public int[] getReBianco();
 	public int[] getReNero();
 	public ConfigurazioneScacchiera creaCopia();
-	public void setColoreMossa(char coloreMossa);
 	
+	public void setColoreMossa(char colore);
 	public char getColoreMossa();
 
 	public ConfigurazioneScacchiera resettaScacchiera();

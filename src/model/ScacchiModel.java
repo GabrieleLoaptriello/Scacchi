@@ -20,11 +20,11 @@ public class ScacchiModel implements Model {
 	
 	public void setConfigurazione(ConfigurazioneScacchiera configurazione){
 		//modifica configurazione se è già stata modificata, altrimenti non ha senso
-		if (this.configurazione != configurazione) {
+
+		if (!this.configurazione.equals(configurazione)) 
 			this.configurazione = configurazione;
-			if (view != null)
-				view.onConfigurationChange();
-		}
+		if (view != null)
+			view.onConfigurationChange();
 	};
 	
 	public void setView(View view){

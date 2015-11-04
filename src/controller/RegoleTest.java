@@ -57,7 +57,7 @@ public class RegoleTest {
 		pezziScacchiera[4][6] = new Pedone('b');
 		pezziScacchiera[4][7] = new Regina('n');
 
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		configurazione.setColoreMossa('b');
 		
 		Regole test = new Regole(configurazione);
@@ -84,7 +84,7 @@ public class RegoleTest {
 		pezziScacchiera[4][2] = new Alfiere('b');
 		pezziScacchiera[4][4] = new Pedone('b');
 
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		configurazione.setColoreMossa('n');
 		
 		Regole test = new Regole(configurazione);
@@ -131,7 +131,7 @@ public class RegoleTest {
 		pezziScacchiera[7][3] = new Torre('b');
 		pezziScacchiera[7][2] = new Re('b');
 
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		configurazione.setColoreMossa('b');
 		
 		Regole test = new Regole(configurazione);
@@ -162,7 +162,7 @@ public class RegoleTest {
 		pezziScacchiera[3][4] = new Cavallo('b');
 		pezziScacchiera[4][4] = new Pedone('b');
 
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		configurazione.setColoreMossa('n');
 		
 		Regole test = new Regole(configurazione);

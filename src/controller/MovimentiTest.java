@@ -36,7 +36,7 @@ public class MovimentiTest {
 		Pezzo[][] pezziScacchiera = new Pezzo[8][8];
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[1][1]=new Pedone('n');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		result.add(1); //x
@@ -56,7 +56,7 @@ public class MovimentiTest {
 		Pezzo[][] pezziScacchiera = new Pezzo[8][8];
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[2][1]=new Pedone('n');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		result.add(1); //x
@@ -74,7 +74,7 @@ public class MovimentiTest {
 		Pezzo[][] pezziScacchiera = new Pezzo[8][8];
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[6][1]=new Pedone('b');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		result.add(1); //x
@@ -94,7 +94,7 @@ public class MovimentiTest {
 		Pezzo[][] pezziScacchiera = new Pezzo[8][8];
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[5][1]=new Pedone('b');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		result.add(1); //x
@@ -112,7 +112,7 @@ public class MovimentiTest {
 		Pezzo[][] pezziScacchiera = new Pezzo[8][8];
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[7][7]=new Torre('b');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		result.add(7);
@@ -156,7 +156,7 @@ public class MovimentiTest {
 		Pezzo[][] pezziScacchiera = new Pezzo[8][8];
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[5][5]=new Cavallo('n');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		result.add(3);
@@ -188,7 +188,7 @@ public class MovimentiTest {
 		Pezzo[][] pezziScacchiera = new Pezzo[8][8];
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[7][7]=new Alfiere('b');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		result.add(6);
@@ -222,7 +222,7 @@ public class MovimentiTest {
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[5][5]=new Regina('n');
 		pezziScacchiera[6][6]=new Pedone('b');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		result.add(4);
 		result.add(4);
@@ -286,7 +286,7 @@ public class MovimentiTest {
 		resettaScacchiera(pezziScacchiera);
 		pezziScacchiera[1][1]=new Re('n');
 		pezziScacchiera[7][1]=new Torre('b');
-		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera);
+		ConfigurazioneScacchiera configurazione = new Scacchiera(pezziScacchiera,'n');
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		result.add(0);
