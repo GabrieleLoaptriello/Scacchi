@@ -114,7 +114,7 @@ public class ScacchiPanel extends JPanel implements View {
 							int x1 = posizioni.getFirst();
 							int y1 = posizioni.getLast();
 								controller.onClick(x1, y1, fromX, fromY, oppostoColore(model.getConfigurazione().getColoreMossa()));
-							if(model.getConfigurazione().getPezzo(fromX, fromY).getValore()==1 && ((model.getConfigurazione().getColoreMossa()=='n' && fromY==0)|| (model.getConfigurazione().getColoreMossa()=='7' && fromY==0)))
+							if(model.getConfigurazione().getPezzo(fromX, fromY).getValore()==1 && ((model.getConfigurazione().getColoreMossa()=='n' && fromY==0)|| (model.getConfigurazione().getColoreMossa()=='b' && fromY==7)))
 								pedinaDaRecuperare(fromX,fromY, oppostoColore(model.getConfigurazione().getColoreMossa()));
 							posizioni.removeFirst();
 							posizioni.removeLast();
