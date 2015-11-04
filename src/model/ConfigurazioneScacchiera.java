@@ -17,6 +17,4 @@ public interface ConfigurazioneScacchiera {
 	public char getColoreMossa();
 
 	public ConfigurazioneScacchiera resettaScacchiera();
-	
-	
 }

@@ -35,7 +35,6 @@ public class Movimenti {
 			result = coordinateRe(x, y, configurazione);
 			break;
 		}
-
 		return result;
 	}
 

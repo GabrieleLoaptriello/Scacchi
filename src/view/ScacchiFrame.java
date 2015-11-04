@@ -29,17 +29,15 @@ public class ScacchiFrame extends JFrame{
 	private void addControlButtons() {
 		JButton nuovaPartita = new JButton("Nuova Partita");
 		nuovaPartita.addActionListener(new java.awt.event.ActionListener(){
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			int result = JOptionPane.showOptionDialog(getRootPane(), "Volete veramente iniziare una nuova partita?", "Nuova Partita",
-				JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null,null);
-			if(result == 0){
-				restart();
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int result = JOptionPane.showOptionDialog(getRootPane(), "Volete veramente iniziare una nuova partita?", "Nuova Partita",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null,null);
+				if(result == 0)
+					restart();
+				
 			}
-		}
-
 		});
+		
 		JPanel panel = new JPanel();
 		panel.add(nuovaPartita);
 		add(panel, BorderLayout.NORTH);
@@ -59,5 +57,4 @@ public class ScacchiFrame extends JFrame{
 		new ScacchiController(addPedine());				
 		scacchiPanel.cancellaBordi();
 	}
-	
 }

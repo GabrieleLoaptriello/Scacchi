@@ -58,7 +58,6 @@ public class ScacchiPanel extends JPanel implements View {
 				add(buttons[x][y] = mkButton(x, y, model.getPezzo(x, y).getValore(), model.getPezzo(x, y).getColore()));
 	}
 
-	// ATTENZIONE FINAL
 	private JButton mkButton(final int fromX, final int fromY, final int value, final char color) {
 
 		final JButton button = new JButton(immaginePezzo(value, color));
@@ -82,7 +81,6 @@ public class ScacchiPanel extends JPanel implements View {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 
-				// disabilita i bottoni vuoti
 				if (controller != null) {
 					if (posizioni.isEmpty() && primoClick && !scaccoMossa && model.getPezzo(fromX, fromY).getValore() != 0 && model.getPezzo(fromX, fromY).getColore()== model.getConfigurazione().getColoreMossa()) {
 						cancellaBordi();
@@ -94,8 +92,7 @@ public class ScacchiPanel extends JPanel implements View {
 						button.setBorder(new CompoundBorder(new EtchedBorder(),new LineBorder(Color.RED, 3)));
 						coloraBordi(fromX, fromY);
 
-					} else if (!posizioni.isEmpty() && model.getPezzo(posizioni.getFirst(),	posizioni.getLast()).getColore() == model.getPezzo(fromX, fromY).getColore()&& !primoClick) { // elimina il doppio click su una
-						// pedina dello stesso colore
+					} else if (!posizioni.isEmpty() && model.getPezzo(posizioni.getFirst(),	posizioni.getLast()).getColore() == model.getPezzo(fromX, fromY).getColore()&& !primoClick) { 
 
 						cancellaBordi();
 						if (!posizioni.isEmpty()) {

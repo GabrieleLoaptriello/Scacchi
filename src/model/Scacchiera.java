@@ -18,7 +18,6 @@ public class Scacchiera extends AbstractConfigurazioneScacchiera{
 				set(x,y, conf.getPezzo(x, y));
 	}
 	
-	
 	public Scacchiera(){
 		scacchiera = new Pezzo[8][8];
 		mossa = 'b';

@@ -47,13 +47,10 @@ public class Regole {
 					}
 			}
 			
-			//controllo che se c'è uno scacco allora devo liberarmi
-			
 			int[] coordinateRe = (configurazione.getColoreMossa()=='n')?configurazione.getReNero():configurazione.getReBianco();
 
 			for(int y=0;y<8;y++){
 				for(int x=0;x<8;x++){
-					//controllo che se sono sotto scacco devo liberarmi(controllo l'attacco degli avversari)
 					if(configurazione.getPezzo(x, y).getColore()==oppostoColore(configurazione.getColoreMossa())){
 						coordinate = movimenti.getCoordinatePedone(configurazione, x,y);
 						for(int v=0;v<coordinate.size();v+=2){
@@ -79,7 +76,6 @@ public class Regole {
 	
 
 	public boolean isScaccoMatto(char colore){
-		
 		ArrayList<Integer> coordinate = null;
 		ArrayList<Integer> coordinateAlleato = null;
 		ArrayList<Integer> coordinateProvaRe = null;
@@ -189,9 +185,6 @@ public class Regole {
 			return false;
 	}
 	
-	
-    
-	//server per il pannello del pedone
 	public ConfigurazioneScacchiera scambia(int fromX, int fromY, AbstractPezzo p) {
 		return configurazione.scambia(fromX, fromY, p);
 		

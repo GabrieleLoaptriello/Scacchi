@@ -19,7 +19,6 @@ import org.junit.Test;
 
 public class MovimentiTest {
 	
-	
 	Movimenti testMovimenti = new Movimenti();
 	
 	private void resettaScacchiera(Pezzo[][] pezzo){

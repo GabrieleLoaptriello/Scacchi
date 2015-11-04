@@ -11,7 +11,6 @@ public abstract class AbstractConfigurazioneScacchiera implements Configurazione
 		return result;
 	}
 
-	
 	@Override
 	public boolean equals(Object other) {
 		if (other instanceof ConfigurazioneScacchiera) {
@@ -26,7 +25,4 @@ public abstract class AbstractConfigurazioneScacchiera implements Configurazione
 		else
 			return false;
 	}
-	
-	
-	
 }

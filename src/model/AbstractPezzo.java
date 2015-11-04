@@ -1,10 +1,7 @@
 package model;
 
 public abstract class AbstractPezzo implements Pezzo {
-	
-	//private int posX;
-	//private int posY;
-	
+
 	private char colore;
 	private int valore;
 	
@@ -32,13 +29,10 @@ public abstract class AbstractPezzo implements Pezzo {
 			return false;
 	}
 	
-	
 	public String toString(){
 		return valore+"|"+colore+" ";
 		
 	}
-	
-
 	
 	public char getColore(){
 		return this.colore;
@@ -47,5 +41,4 @@ public abstract class AbstractPezzo implements Pezzo {
 	public int getValore(){
 		return this.valore;
 	}
-	
 }
