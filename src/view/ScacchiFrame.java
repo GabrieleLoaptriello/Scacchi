@@ -60,5 +60,4 @@ public class ScacchiFrame extends JFrame{
 		scacchiPanel.cancellaBordi();
 	}
 	
-	
 }

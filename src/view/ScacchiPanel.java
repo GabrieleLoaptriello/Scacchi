@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -116,9 +117,9 @@ public class ScacchiPanel extends JPanel implements View {
 
 							int x1 = posizioni.getFirst();
 							int y1 = posizioni.getLast();
-							controller.onClick(x1, y1, fromX, fromY, oppostoColore(model.getConfigurazione().getColoreMossa()));
-							if(model.getConfigurazione().getPezzo(fromX, fromY).getValore()==1 && ((model.getConfigurazione().getColoreMossa()=='n' && fromY==7)|| (model.getConfigurazione().getColoreMossa()=='b' && fromY==0)))
-								pedinaDaRecuperare(fromX,fromY, model.getConfigurazione().getColoreMossa());
+								controller.onClick(x1, y1, fromX, fromY, oppostoColore(model.getConfigurazione().getColoreMossa()));
+							if(model.getConfigurazione().getPezzo(fromX, fromY).getValore()==1 && ((model.getConfigurazione().getColoreMossa()=='n' && fromY==0)|| (model.getConfigurazione().getColoreMossa()=='7' && fromY==0)))
+								pedinaDaRecuperare(fromX,fromY, oppostoColore(model.getConfigurazione().getColoreMossa()));
 							posizioni.removeFirst();
 							posizioni.removeLast();
 							primoClick = true;
@@ -260,7 +261,6 @@ public class ScacchiPanel extends JPanel implements View {
 		});
 		return button;
 	}
-
 	@Override
 	public void showEndPanel() {
 		cancellaBordi();
